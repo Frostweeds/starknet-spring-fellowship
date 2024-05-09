@@ -10,32 +10,42 @@ However, there is something interesting we can do ! Instead of considering just 
 
 Actually, for any two tokens that have several pools available, we can estimate their price and use that value as the oracle. The accuracy and variance of the value will depend on the amount of pools available as well as the depth of their liquidity but in general this is feasible. This approach allow us to get rid of oracle for most scenarios.
 
-Following what has just been said, we are going to separate the process into two stages, first generate the paths and then finding arbitrages using optimisation algorithm.
+Following what has just been said, we are going to separate the process into two stages, first generate the paths and then finding arbitrages using optimisation algorithms.
 
 Recall that by definition our graph is a undirected graph, i.e edges can be taken in any direction. To generate all the paths from to token, we will start from the all the pools that have as token, the token $from$, and we will then simply follow edges until we find all the pools that are reachable and have as token the token $to$.
 
 However, there are a few subtleties to take into account.
 
+---
+
 ## Exercise 1
 
 Is is possible to have a path $A_1 \rightarrow A_2 \rightarrow A_1$ that has an arbitrage opportunity ?
+
+---
 
 ## Exercise 2
 
 Is it possible to have a path with an arbitrage opportunity $A_1 \rightarrow ... \rightarrow A_n$ such that it contains a subpath $P$ as in exercise 2 and by removing $P$ there is no longer an arbitrage ?
 
+---
+
 ## Exercice 3
 
 Suppose that you have an arbitrage opportunity on a path $A_1 \rightarrow A_2 \rightarrow A_3$, is it possible to have a better arbitrage on a path $A_1 \rightarrow A_2 \rightarrow A_3 \rightarrow .. \rightarrow A_3$ ?
 
+---
+
 So using the observations made with the exercise above, let's write our path generation algorithm !
+
+---
 
 # Exercise 4
 
 On the $PoolGraph$ type, write the method 
 
 ```
-route(from, to) -> RouteGraph
+route(from, to) -> RouteGraph // Generate all the paths starting at from and ending at to
 ```
 
 Where $RouteGraph$ is a recursive type defined as 
@@ -45,7 +55,7 @@ RouteGraph = [Route(uuid, DirectedPool, RouteGraph)]
 DirectedPool = (From, To, Pool)
 ```
 
-We propose to assign to each node of the route a unique index (uuid) that will be useful when we are going to perform the optimisation.
+We propose to assign to each node of the route a unique index (uuid) that will be useful when we are going to perform the optimisation. We propose to simply assign consecutive numbers starting from 0 as the uuid.
 
 Congrats, you should now be able to fetch the pools from the database, initialize a graph and generate valid $RouteGraph$ for different token (from, to) ! Now what remains it to use these subgrap which are now acyclic-directed graph (tree) to find arbitrages and this will be the subject of next's week challenge !
 
