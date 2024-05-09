@@ -53,10 +53,20 @@ Create an ApiBara account and write an indexer that process Jediswap events to i
 ```
 - pool_address
 - fee
+- token_a
 - reserve_a
+- decimals_a
+- token_b
 - reserve_b
+- decimals_b
 ```
 
+---
+
+> [!NOTE]
+> You may wonder why we need the decimals as well and maybe what's the purpose of this data ? On blockchain, floating point number are in general not support. Instead, we encode them using big integer by multiplying the decimal portion by a power of ten that depends on the precision we want. That power of ten is the decimals of the token (for example ETH is 18 and USDC is 8). We propose to store them because in the challenge 5 we will implement optimisation algorithm and some of them behave better on smaller value. You might not need these value depending on our algorithm but in the case you do, you'll have them available :)
+
+Let's now connect the database to our indexer !
 
 ---
 
