@@ -7,8 +7,6 @@ Last week we've managed to index the data we need to simulate Jediswap - Uniswap
 
 Here is a proposition of the bot architecture but you are free to implement it entierely differently. Nonetheless, the exercises below are written based on the assumption that you are following the diagram. 
 
-TODO Diagram
-
 ---
 
 ### Exercise 1
