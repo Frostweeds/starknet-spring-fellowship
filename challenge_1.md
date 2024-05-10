@@ -25,7 +25,7 @@ Where $A$ and $B$ are the assets and the reserves are the amount of each of thes
 
 ### Exercise 1
 
-Derive the two functions $f_{a \rightarrow b}(x) = y$ and $f_{b \rightarrow a}(x) = y$
+Derive the two functions $f_{A \rightarrow B}(x) = y$ and $f_{B \rightarrow A}(x) = y$
 
 <details>
   <summary>Solution</summary>
