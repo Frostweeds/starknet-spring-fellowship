@@ -17,7 +17,7 @@ Let's now get back to the context of our arbitrage bot. How do we find arbitrage
 
 To make it more concrete, let's see what it means for the Uniswap V2 model. This model is based on what we call a "constant-product formula" which is an invariant that takes the form 
 
-$$reserve_A*reserve_A = K, K \in \mathbb{R}^+ $$
+$$reserve_A*reserve_B = K, K \in \mathbb{R}^+ $$
 
 Where $A$ and $B$ are the assets and the reserves are the amount of each of these assets managed by the pool. The value $K$ is a constant implicitely defined at the initialisation of the pool from the the value set for the reserves. So, once the pool has been initialized, the invariant should always hold true ! So assuming that it's true, we can use the invariant to deduce the actual swaps functions of Uniswap V2, i.e the function $f_{A \rightarrow B}(x) = y$ and $f_{B \rightarrow A}(x) = y$ that gives for an amount of token $A$ (respectively $B$) the amount of token $B$ (respectively $A$) one would obtain.
 
