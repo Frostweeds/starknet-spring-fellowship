@@ -111,7 +111,7 @@ Suppose we are at block B and we have a pool $Pool(reserve_A,reserve_B)$ balance
 
 ### Exercise 5
 
-Suppose that we have a balanced pool $Pool(reserve_A,reserve_B)$ i.e f_{A \rightarrow B}(1) = P, the real market price. Now suppose someone comes in an trade an amount $x$. What is the new price after the swap, how does it compare to the real market price ?
+Suppose that we have a balanced pool $Pool(reserve_A,reserve_B)$ i.e $f_{A \rightarrow B}(1) = P$, the real market price. Now suppose someone comes in an trade an amount $x$. What is the new price after the swap, how does it compare to the real market price ?
 
 <details>
   <summary>Solution</summary>
