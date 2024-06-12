@@ -9,6 +9,7 @@ Consider any valid path $A_1 \rightarrow .. \rightarrow A_n$ such that $A_1 \neq
 ### Exercise 1
 
 How would you decide if there is an arbitrage or not on this path ?
+
 ---
 
 Now consider the same path but where $from \neq to$
