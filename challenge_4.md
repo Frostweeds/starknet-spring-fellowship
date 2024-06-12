@@ -26,7 +26,7 @@ Is is possible to have a path $A_1 \rightarrow A_2 \rightarrow A_1$ that has an 
 
 ## Exercise 2
 
-Is it possible to have a path with an arbitrage opportunity $A_1 \rightarrow ... \rightarrow A_n$ such that it contains a subpath $P$ as in exercise 2 and by removing $P$ there is no longer an arbitrage ?
+Is it possible to have a path with an arbitrage opportunity $A_1 \rightarrow ... \rightarrow A_n$ such that it contains a subpath $P$ as in exercise 1 and by removing $P$ there is no longer an arbitrage ?
 
 ---
 
