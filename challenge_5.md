@@ -14,6 +14,8 @@ How would you decide if there is an arbitrage or not on this path ?
 
 Now consider the same path but where $from \neq to$
 
+---
+
 ### Exercise 2
 
 How would you decide if there is an arbitrage or not on this path ?
