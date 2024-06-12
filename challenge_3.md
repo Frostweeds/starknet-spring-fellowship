@@ -21,7 +21,7 @@ Implement the $Pool$ type that store the data we've indexed and exposes at least
 ---
 ### Exercise 2
 
-Implement the $PoolGraph$ type which will store our $G(V;E)$ of pools. The set $V$ of vertices will be the pools while the set $E$ of edges will contains a edge between any two pools that have a common token. For example, suppose you have two pools $P_{A,B},P_{B,C}$, where $A,B,C$ are tokens then there will be an edge between them because they share token $B$.
+Implement the $PoolGraph$ type which will store our graph $G(V;E)$ of pools. The set $V$ of vertices will be the pools while the set $E$ of edges will contains a edge between any two pools that have a common token. For example, suppose you have two pools $P_{A,B},P_{B,C}$, where $A,B,C$ are tokens then there will be an edge between them because they share token $B$.
 
 The $PoolGraph$ will be used to generate all the paths going from any token $A$ to any token $B$ so you can already use that information in your implementation, however path generation will be the subject of next week's challenge.
 
